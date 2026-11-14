@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/*
+  Colours and fonts for the whole site.
+  Change a colour here and it changes everywhere.
+*/
+@theme inline {
+  --color-sky: #e8eef0; /* page background, pale high-altitude sky */
+  --color-wash: #fbfcfa; /* whitewash, for panels and light text */
+  --color-ink: #14233b; /* deep lake blue, main text */
+  --color-mute: #4e5d72; /* quieter text */
+  --color-lake: #2b6a8c; /* links */
+  --color-milestone: #f4c22b; /* road milestone yellow */
+  --color-robe: #7b2231; /* monk-robe maroon, handwritten notes */
+  --color-rule: #c3ced5; /* thin lines */
+  --color-ridge-far: #cbd8df;
+  --color-ridge-mid: #8ea5b7;
+
+  --font-display: var(--font-barlow), "Arial Narrow", sans-serif;
+  --font-body: var(--font-vollkorn), Georgia, serif;
+  --font-hand: var(--font-kalam), "Comic Sans MS", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-sky);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-lake);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-milestone);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
